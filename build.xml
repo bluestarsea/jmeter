@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="ant-jmeter-test" default="run" basedir=".">
+   <property environment="env"/>
    <tstamp>
        <format property="time" pattern="yyyyMMddhhmm" />
    </tstamp>
