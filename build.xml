@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="ant-jmeter-test" default="run" basedir=".">
-   <property environment="env"/>
    <tstamp>
        <format property="time" pattern="yyyyMMddhhmm" />
    </tstamp>
@@ -24,7 +23,7 @@
       <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" />
       <jmeter jmeterhome="${jmeter.home}" resultlog="${jmeter.result.jtlName}" >
             <!-- 声明要运行的脚本。"*.jmx"指包含此目录下的所有jmeter脚本-->
-           <testplans dir=${env.WORKSPACE} includes="*.jmx" />
+           <testplans dir="/var/lib/jenkins/workspace/jmeter_lps" includes="*.jmx" />
 		   <property name="jmeter.save.saveservice.output_format" value="xml" />
        </jmeter>
    </target>
