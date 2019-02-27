@@ -53,6 +53,7 @@
                 <include name="collapse.png" />
                 <include name="expand.png" />
             </fileset>
-        </copy>
+        </copy> 
+		<delete file="${jmeter.result.dir}/${ReportName1}${time}.jtl"/>
     </target>
 </project>
