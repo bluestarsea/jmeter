@@ -7,13 +7,13 @@
    <!-- 需要改成自己本地的 Jmeter 目录-->
    <property name="jmeter.home" value="/usr/local/apache-jmeter-5.0" />
    <!-- jmeter生成报告的路径-->
-   <property name="jmeter.result.dir" value="/data/jmeter/report/${time}" />
+   <property name="jmeter.result.dir" value="/usr/local/tomcat/webapps/report/" />
    <!-- 生成的报告的前缀-->
    <property name="ReportName1" value="TestReport" />
    <property name="ReportName2" value="DetailReport" />
-   <property name="jmeter.result.jtlName" value="${jmeter.result.dir}/${ReportName1}.jtl" />
-   <property name="jmeter.result1.htmlName" value="${jmeter.result.dir}/${ReportName1}.html" />
-   <property name="jmeter.result2.htmlName" value="${jmeter.result.dir}/${ReportName2}.html" />  
+   <property name="jmeter.result.jtlName" value="${jmeter.result.dir}/${ReportName1}${time}.jtl" />
+   <property name="jmeter.result1.htmlName" value="${jmeter.result.dir}/${ReportName1}${time}.html" />
+   <property name="jmeter.result2.htmlName" value="${jmeter.result.dir}/${ReportName2}${time}.html" />  
    <target name="run">
        <antcall target="test" />
        <antcall target="report" /> 
